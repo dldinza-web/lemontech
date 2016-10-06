@@ -3,5 +3,5 @@ class CourseStudent < ApplicationRecord
 
   belongs_to  :course
   belongs_to  :student
-  has_many    :result_exams
+  has_many    :result_exams, dependent: :destroy
 end
