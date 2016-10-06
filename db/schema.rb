@@ -34,11 +34,8 @@ ActiveRecord::Schema.define(version: 20161006012301) do
 
   create_table "exams", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "name",       null: false
-    t.integer  "course_id",  null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["course_id"], name: "index_exams_on_course_id", using: :btree
-    t.index ["name", "course_id"], name: "index_exams_on_name_and_course_id", unique: true, using: :btree
     t.index ["name"], name: "index_exams_on_name", using: :btree
   end
 
@@ -74,7 +71,6 @@ ActiveRecord::Schema.define(version: 20161006012301) do
   add_foreign_key "course_students", "courses"
   add_foreign_key "course_students", "students"
   add_foreign_key "courses", "teachers"
-  add_foreign_key "exams", "courses"
   add_foreign_key "result_exams", "course_students"
   add_foreign_key "result_exams", "exams"
 end

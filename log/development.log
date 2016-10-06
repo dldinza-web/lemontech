@@ -1,1 +1,0 @@
-  [1m[36mTeacher Load (0.5ms)[0m  [1m[34mSELECT `teachers`.* FROM `teachers`[0m

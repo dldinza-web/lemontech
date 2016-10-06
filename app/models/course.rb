@@ -4,7 +4,6 @@ class Course < ApplicationRecord
   validates :name, uniqueness: true
 
   belongs_to  :teacher
-  has_many    :exams
   has_many    :course_students
   has_many    :students, through: :course_students
 end

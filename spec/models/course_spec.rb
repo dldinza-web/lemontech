@@ -9,13 +9,6 @@ describe Course do
     expect(subject.teacher).to be_persisted
   end
 
-  it "has multiple exams" do
-    Fabricate(:exam, name: "Solemne 1", course_id: subject.id)
-    Fabricate(:exam, name: "Solemne 2", course_id: subject.id)
-
-    expect(subject.exams.count).to eq 2
-  end
-
   context "with multiple students" do
     let!(:students) {[
       Fabricate(:student),
