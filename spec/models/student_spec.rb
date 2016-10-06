@@ -39,9 +39,9 @@ describe Student do
       let!(:course_student) { Fabricate(:course_student, course_id: courses[0].id, student_id: subject.id) }
 
       let!(:exams) {[
-        Fabricate(:exam, name: "Solemne 1", course_id: courses[0].id),
-        Fabricate(:exam, name: "Solemne 2", course_id: courses[0].id),
-        Fabricate(:exam, name: "Solemne 3", course_id: courses[0].id)
+        Fabricate(:exam, name: "Solemne 1"),
+        Fabricate(:exam, name: "Solemne 2"),
+        Fabricate(:exam, name: "Solemne 3")
       ]}
 
       let!(:result_exams) {[
