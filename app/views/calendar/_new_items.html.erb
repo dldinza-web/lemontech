@@ -1,0 +1,8 @@
+<div class="cell hour-wrapper">
+  <div data-time="<%= block_time.strftime('%H:%M') %>">
+    <%= render 'new_add' %>
+  </div>
+  <div data-time="<%= (block_time + 30.minutes).strftime('%H:%M') %>">
+    <%= render 'new_add' %>
+  </div>
+</div>
