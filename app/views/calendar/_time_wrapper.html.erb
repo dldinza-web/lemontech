@@ -1,0 +1,6 @@
+<% 24.times do |i| block_time = Time.parse("#{i}:00") %>
+  <div class="cell hour-wrapper">
+    <div><%= block_time.strftime('%H:%M') %></div>
+    <div><%= (block_time + 30.minutes).strftime('%H:%M') %></div>
+  </div>
+<% end %>
