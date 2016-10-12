@@ -1,0 +1,58 @@
+<div id="calendar">
+  <div class="time column">
+    <div class="title cell"><<</div>
+    <%= render 'time_wrapper' %>
+  </div>
+  <div class="column day-wrapper" data-weekday="lunes">
+    <div class="title cell">Lunes 09</div>
+    <% 24.times do |i| %>
+      <% if (0..4).include? i %>
+        <%= render 'new_items', { block_time: Time.parse("#{i}:00") } %>
+      <% else %>
+        <%= render 'empty_items', { block_time: Time.parse("#{i}:00") } %>
+      <% end %>
+    <% end %>
+  </div>
+  <div class="column day-wrapper" data-weekday="martes">
+    <div class="title cell">Martes 10</div>
+    <% 24.times do |i| %>
+      <% if (9..10).include? i %>
+        <%= render 'new_items', { block_time: Time.parse("#{i}:00") } %>
+      <% else %>
+        <%= render 'empty_items', { block_time: Time.parse("#{i}:00") } %>
+      <% end %>
+    <% end %>
+  </div>
+  <div class="column day-wrapper" data-weekday="miercoles">
+    <div class="title cell">Miércoles 11</div>
+    <%= render 'hour_wrapper' %>
+  </div>
+  <div class="column day-wrapper" data-weekday="jueves">
+    <div class="title cell">Jueves 12</div>
+    <% 24.times do |i| %>
+      <% if [7, 13, 14].concat((20..23).to_a).include? i %>
+        <%= render 'new_items', { block_time: Time.parse("#{i}:00") } %>
+      <% else %>
+        <%= render 'empty_items', { block_time: Time.parse("#{i}:00") } %>
+      <% end %>
+    <% end %>
+  </div>
+  <div class="column day-wrapper" data-weekday="viernes">
+    <div class="title cell">Viernes 13</div>
+    <%= render 'hour_wrapper' %>
+  </div>
+  <div class="column day-wrapper" data-weekday="sabado">
+    <div class="title cell">Sábado 14</div>
+    <% 24.times do |i| %>
+      <%= render 'new_items', { block_time: Time.parse("#{i}:00") } %>
+    <% end %>
+  </div>
+  <div class="column day-wrapper" data-weekday="domingo">
+    <div class="title cell">Domingo 15</div>
+    <%= render 'hour_wrapper' %>
+  </div>
+  <div class="time column">
+    <div class="title cell">>></div>
+    <%= render 'time_wrapper' %>
+  </div>
+</div>

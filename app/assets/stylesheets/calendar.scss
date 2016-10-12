@@ -1,0 +1,78 @@
+// Place all the styles related to the Calendar controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+#calendar {
+  width: 960px;
+  margin: 2em auto;
+  overflow: auto;
+
+  .column {
+    float: left;
+    width: 12%;
+    vertical-align: top;
+    border-right: 1px solid #ccc;
+  }
+
+  .column:last-child {
+    border: none;
+  }
+
+  .title {
+    color: #0000FF;
+    font-weight: bold;
+    text-align: center;
+    background-color: #D3E6EC;
+    margin-bottom: 2px;
+    padding: 2px 3px;
+  }
+
+  .time {
+    width: 6.3%;
+
+    .cell.hour-wrapper div {
+      text-align: center;
+      font-size: x-small;
+      height: 20px;
+      border-bottom: 1px solid #ccc;
+      background-color: #F0F0F0;
+      position: relative;
+    }
+  }
+
+  .day-wrapper .hour-wrapper div {
+    border-bottom: 1px solid #ccc;
+    height: 20px;
+
+    .item {
+      border: none;
+      font-size: x-small;
+      color: #0000FF;
+      padding: 3px;
+      height: 14px;
+      position: absolute;
+      width: 109px;
+    }
+
+    .item:hover {
+      cursor: pointer;
+    }
+
+    .new-item {
+      background-color: #D3E6EC;
+    }
+
+    .new-item:hover {
+      background-color: #e5f5f9;
+    }
+
+    .item-scheduled {
+      background: url('images/globe.png') no-repeat scroll right 2px;
+      background-color: #fff1db;
+    }
+
+    .item-scheduled:hover {
+      background-color: #FEFEAB;
+    }
+  }
+}
